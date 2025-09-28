@@ -25,12 +25,12 @@
         scroll-behavior: smooth;
       }
     </style>
-    <!-- Load React and ReactDOM from a reliable CDN -->
+    <!-- Load React and ReactDOM from a reliable CDN. These will be available globally. -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <!-- Load Babel to transpile JSX/TSX in the browser -->
     <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.1.1",
@@ -42,7 +42,7 @@
 </head>
   <body class="bg-slate-900 text-slate-200 antialiased">
     <div id="root"></div>
-    <!-- Load and transpile the React component. Use a relative path for GitHub Pages compatibility. -->
+    <!-- Load and transpile the React component. Babel will use the global React object. -->
     <script type="text/babel" src="index.tsx"></script>
   </body>
 </html>
