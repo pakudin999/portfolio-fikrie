@@ -1,3 +1,4 @@
+// FIX: Import React and ReactDOM to make them available in the module.
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 

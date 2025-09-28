@@ -25,21 +25,24 @@
         scroll-behavior: smooth;
       }
     </style>
+    <!-- Load React and ReactDOM from a reliable CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- Load Babel to transpile JSX/TSX in the browser -->
+    <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
     "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
   }
 }
 </script>
-<!-- Add Babel to transpile TSX in the browser -->
-<script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
 </head>
   <body class="bg-slate-900 text-slate-200 antialiased">
     <div id="root"></div>
-    <!-- Changed script type to "text/babel" to be processed by Babel -->
-    <script type="text/babel" src="/index.tsx"></script>
+    <!-- Load and transpile the React component. Use a relative path for GitHub Pages compatibility. -->
+    <script type="text/babel" src="index.tsx"></script>
   </body>
 </html>
