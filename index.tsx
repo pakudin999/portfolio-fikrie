@@ -1,4 +1,4 @@
-// FIX: Import React and ReactDOM to make them available in the module.
+// FIX: Add imports for React and ReactDOM to resolve reference errors.
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
